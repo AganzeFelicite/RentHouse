@@ -15,12 +15,13 @@ import java.util.List;
 public class House {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long HouseId;
+    private Long houseId;
     private String location;
     private int capacity;
+    @ElementCollection
     private List<String> amenities;
     private double pricePerMonth;
-
+    @ElementCollection
     private List<String> houseImageList;
     @ManyToOne
     @JoinColumn( name = "bookedBy")

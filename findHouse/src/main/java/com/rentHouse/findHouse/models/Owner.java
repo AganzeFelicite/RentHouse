@@ -1,5 +1,6 @@
 package com.rentHouse.findHouse.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.extern.java.Log;
@@ -23,6 +24,7 @@ public class Owner {
 
     private String password;
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<House> listOfHouses;
 
     private String ownerProfileUrl;

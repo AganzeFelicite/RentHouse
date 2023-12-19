@@ -58,7 +58,12 @@ export default function BasicMenu() {
           Signup
         </MenuItem>
 
-        <MenuItem onClick={handleClose} className="menu-items">
+        <MenuItem
+          component={Link}
+          to="/owner/login"
+          onClick={handleClose}
+          className="menu-items"
+        >
           Login
         </MenuItem>
         <div
@@ -68,7 +73,13 @@ export default function BasicMenu() {
             width: "100%",
           }}
         />
-        <MenuItem onClick={handleClose} className="menu-items">
+
+        <MenuItem
+          component={Link}
+          to="/owner/addHouse"
+          onClick={handleClose}
+          className="menu-items"
+        >
           Rent Your Home
         </MenuItem>
         <MenuItem onClick={handleClose} className="menu-items">

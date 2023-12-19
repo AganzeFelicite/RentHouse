@@ -45,7 +45,9 @@ function Header() {
         )}
       </div>
       <div className="profile-container">
-        <div className="airbnb-your-home">Rent Your House</div>
+        <div className="airbnb-your-home">
+          <Link to="/owner/addHouse">Rent Your House</Link>
+        </div>
         <div className="airbnb-your-home">
           <LanguageIcon sx={{ fontSize: "1.3rem" }} />
         </div>

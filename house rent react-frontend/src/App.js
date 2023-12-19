@@ -8,6 +8,11 @@ import ListOfHouses from "./components/ListOfHouses";
 import OnwerForm from "./components/OnwerForm";
 import Login from "./components/Login";
 import BottomNav from "./components/footer";
+import CreateHouse from "./components/CreateHouse";
+import CreateUser from "./components/CreateUser";
+import Houses from "./components/Houses";
+import OwnerContacts from "./components/OwnerContacts";
+import errorPage from "./components/error";
 
 function App() {
   const [selectedFilter, setSelectedFilter] = useState(0);
@@ -24,17 +29,25 @@ function App() {
           <Route
             path="/"
             element={
-              <ListOfHouses
-                selectedFilter={selectedFilter}
-                list={list}
-                list2={list2}
-              />
+              <div>
+                <ListOfHouses
+                  selectedFilter={selectedFilter}
+                  list={list}
+                  list2={list2}
+                />
+                <Houses />
+              </div>
             }
           />
-
+          {/* <Route path="/house/creation" element={<CreateHouse />} /> */}
           {/* Route for owner registration */}
-          <Route path="/owner/registerOwner" element={<OnwerForm />} />
-          <Route path="/owner/login" element={<Login />} />
+          <Route exact path="/owner/registerOwner" element={<OnwerForm />} />
+          <Route exact path="/owner/login" element={<Login />} />
+          <Route exact path="/user/registerUser" element={<CreateUser />} />
+          <Route exact path="/owner/addHouse" element={<CreateHouse />} />
+
+          <Route exact path="/house/owner" element={<OwnerContacts />} />
+          <Route path="*" element={<emptyPage />} />
         </Routes>
         <BottomNav />
         {/* Place the BottomNavigation outside the Routes */}

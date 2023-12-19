@@ -4,7 +4,7 @@ import "./styles.css";
 function Cards({ list }) {
   return (
     <div className="cards-flex">
-      {list.map((card, i) => (
+      {list?.map((card, i) => (
         <Card card={card} key={i} />
       ))}
     </div>

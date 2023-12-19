@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import { Link } from "react-router-dom";
 
 function Card({ card }) {
   return (
@@ -20,23 +21,32 @@ function Card({ card }) {
         modules={[Pagination, Navigation]}
         className="swiper-container"
       >
-        {card.imgSrc.map((src, i) => (
+        {card?.houseImageList.map((src, i) => (
           <SwiperSlide key={i}>
-            <img src={src} className="card-img" />
+            <Link
+              to={{
+                pathname: "/house/owner",
+                data: card.owner,
+              }}
+            >
+              <img src={src} className="card-img" />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
       <div className="card-info-flex">
-        <h3 className="card-title">{card.title}</h3>
+        <h3 className="card-title">{card.location}</h3>
         <div className="card-rating">
           <StarRateRoundedIcon />
-          <p>{card.rating}</p>
+          <p>{2 || 3}</p>
         </div>
       </div>
-      <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.desc}</p>
-      <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.date}</p>
+      <p style={{ margin: 0, color: "var(--font-grey)" }}>
+        The house has {card.capacity} of rooms
+      </p>
+      <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.capacity}</p>
       <p style={{ margin: "0.2rem", fontSize: "1rem", color: "var(--black" }}>
-        <span style={{ fontWeight: "600" }}>₹{card.price}</span> night
+        <span style={{ fontWeight: "600" }}>RWF{card.pricePerMonth}</span> month
       </p>
     </div>
   );

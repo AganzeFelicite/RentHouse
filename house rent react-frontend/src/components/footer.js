@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 const BottomNav = () => {
   return (
     <div>
-      <footer class="site-footer">
+      <footer class="site-footer mt-4">
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-6">

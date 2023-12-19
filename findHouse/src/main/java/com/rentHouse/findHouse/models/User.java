@@ -32,4 +32,15 @@ public class User {
 
     private String profileUrl;
 
+    public User(String firstName, String lastName, String userName, String password, String phoneNumber, String email, List<House> bookedHouses, List<House> likedHouses, String profileUrl) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.bookedHouses = bookedHouses;
+        this.likedHouses = likedHouses;
+        this.profileUrl = profileUrl;
+    }
 }

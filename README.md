@@ -6,6 +6,8 @@
 
 ![This is an illustration of the admin dashboard where he can manages houses and the whole site](https://github.com/AganzeFelicite/RentHouse/blob/9aef099ff68ba0065651cf188fa4f6af38b03eef/Screenshot%20from%202023-12-19%2011-47-03.png)
 
+![This is an illustration of the admin dashboard where he can manages houses and the whole site](https://github.com/AganzeFelicite/RentHouse/blob/main/Screenshot%20from%202023-12-19%2011-54-12.png)
+
 web tech final project
 RentHouse
 
